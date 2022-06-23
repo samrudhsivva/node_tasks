@@ -1,0 +1,44 @@
+var arr=process.argv;
+//console.log(arr[2]);
+if(arr[3]=='addition')
+{
+   console.log(add(arr));
+}
+if(arr[3]=='subtraction')
+{
+    console.log(sub(arr));
+}
+if(arr[3]=='multiplication')
+{
+    console.log(mul(arr));
+}
+if(arr[3]=='division')
+{
+    console.log(div(arr));
+}
+function add(arr)
+{
+    var sum=0;
+    for(let i=4;i<arr.length;i++)
+    {
+        sum+=parseInt(arr[i]);
+    }
+    return sum;
+}
+function mul(arr)
+{
+    var tot=1;
+    for(let i=4;i<arr.length;i++)
+    {
+        tot*=parseInt(arr[i]);
+    }
+    return tot;
+}
+function sub(arr)
+{
+    return parseInt(arr[4])-parseInt(arr[5]);
+}
+function div(arr)
+{
+    return parseInt(arr[4])/parseInt(arr[5]);
+}
